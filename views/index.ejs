@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/index/index.css">
+    <link rel="stylesheet" href="style/common/normalize.css">
+    <script src='script/common/jquery-2.2.3.min.js'></script>
+    <script type="text/javascript">
+        //屏幕适应 
+        (function (win, doc) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+
+            function setFont() {
+                var html = document.documentElement;
+                var k = 750;
+                //适应pc端
+                if (html.clientWidth > 500) {
+                    html.style.fontSize = 500 / k * 100 + 'px';
+                } else {
+                    html.style.fontSize = html.clientWidth / k * 100 + 'px';
+                }
+
+            }
+
+            setFont();
+            setTimeout(function () {
+                setFont();
+            }, 300);
+            doc.addEventListener('DOMContentLoaded', setFont, false);
+            win.addEventListener('resize', setFont, false);
+            win.addEventListener('load', setFont, false);
+        })(window, document);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id='hammer' class="shake">
+            <img src="images/hammer.png" class="hammer-img" />
+        </div>
+        <div class="hammer-container shak">
+            <div class="hammer-head"></div>
+            <div class="hammer-foot"></div>
+        </div>
+        <div class="eggs">
+            <div class="egg-head"></div>
+            <div class="egg-body"></div>
+            <div class="egg-foot"></div>
+        </div>
+    </div>
+    <script src='script/index/index.js'></script>
+</body>
+
+</html>

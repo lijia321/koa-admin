@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 180px;
+  /* margin-top: 300px; */
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.login-form .form-inline {
+  margin-bottom: 24px;
+}
+.login-form button {
+  margin-top: 24px;
+}

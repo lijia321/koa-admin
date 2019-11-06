@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 180px;
+  /* margin-top: 300px; */
+}
+.regist-form {
+  display: flex;
+  flex-direction: column;
+
+}
+.regist-form .form-inline {
+    justify-content: space-between;
+  margin-bottom: 24px;
+}
+

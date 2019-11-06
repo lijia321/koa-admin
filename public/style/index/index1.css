@@ -1,0 +1,6 @@
+.container {
+  background: red;
+}
+.container .hammer {
+  height: 20px;
+}
