@@ -20,4 +20,11 @@ body {
     justify-content: space-between;
   margin-bottom: 24px;
 }
-
+.toast{
+  background: #333333;
+  opacity: 0.8;
+  color: white;
+}
+.toast.hide {
+  display: none;
+}

@@ -5,6 +5,7 @@
         $user:$('#usr'),
         $pwd:$('#pwd'),
         $cpwd:$('#confirm-pwd'),
+        
     }
     //后端地址
     var _urls = {
@@ -27,9 +28,17 @@
                password:_$objs.$pwd.val(),
                repeatpass:_$objs.$cpwd.val()
             }
-            console.log(params)
+            console.log(params);
+            $('#myToast').toast('show')
             _util.ajaxFun('/api/v1/user/signup','post',params,function(data){
-                console.log(data,'data==============')
+                console.log(data,'data==============');
+                if (data.code == 0) {
+                    window.location.href='/login'
+                } else {
+                    $('#myToast').toast('show');
+                    $('#myToast .toast-body').text(data.msg)
+                }
+               
             })
             // return false
          
@@ -64,7 +73,7 @@
     }
     //初始化
     var init = function () {
-        console.log('start', '============')
+        console.log('start', '============');
         _event.submit();
         //_plugs.swiper = new Swiper("swiperContainer", {})
     }
